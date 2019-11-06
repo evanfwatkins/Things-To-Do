@@ -17,7 +17,7 @@ a {
 .btn {
   display: inline-block;
   border: none;
-  background: #555;
+  background: rgb(38, 169, 224);
   color: #fff;
   padding: 7px 20px;
   cursor: pointer;
