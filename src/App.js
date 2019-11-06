@@ -24,7 +24,7 @@ componentDidMount() {
 
   // Add Todo
   addTodo = (title, id) => {
-    axios.post('https://jsonplaceholder.typicode.com/todos', {
+    axios.put('https://jsonplaceholder.typicode.com/todos', {
       id,
       title,
       completed: false
