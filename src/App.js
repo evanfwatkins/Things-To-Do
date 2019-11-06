@@ -13,13 +13,9 @@ import Axios from 'axios';
 
 class App extends React.Component {
   state = {
-    todos: [
-      {
-        id: uuid.v4(),
-        title,
-        completed: false
+    todos: []
+  } 
       }
-    ]
   } 
 
 componentDidMount() {
@@ -35,6 +31,7 @@ componentDidMount() {
       title,
       completed: false
     })
+      console.log(todo.id)
       .then(res => this.setState({ todos: [...this.state.todos, res.data] }));
     
   }
