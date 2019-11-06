@@ -4,7 +4,7 @@ import Header from './components/Layout/Header';
 import Todos from './components/Todos';
 import AddTodo from './components/Layout/AddTodo';
 import About from './components/Pages/About';
-import uuid from 'uuid';
+// import uuid from 'uuid';
 import axios from 'axios';
 
 import './App.css';
@@ -15,8 +15,6 @@ class App extends React.Component {
   state = {
     todos: []
   } 
-      }
-  } 
 
 componentDidMount() {
   Axios.get('https://jsonplaceholder.typicode.com/todos?_limit=3')
@@ -25,13 +23,12 @@ componentDidMount() {
 
 
   // Add Todo
-  addTodo = (title) => {
+  addTodo = (title, id) => {
     axios.post('https://jsonplaceholder.typicode.com/todos', {
-      id: uuid.v4(),
+      id,
       title,
       completed: false
     })
-      console.log(todo.id)
       .then(res => this.setState({ todos: [...this.state.todos, res.data] }));
     
   }
